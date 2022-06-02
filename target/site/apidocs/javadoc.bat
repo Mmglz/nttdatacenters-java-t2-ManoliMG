@@ -1,1 +1,0 @@
-cmd.exe /X /C "C:\Users\manol\Desktop\NttData\Tools\Java\JDK\jdk-17.0.2\bin\javadoc.exe -J-Xmx512m @options @packages @argfile"

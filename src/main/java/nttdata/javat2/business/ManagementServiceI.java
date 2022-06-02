@@ -6,7 +6,7 @@ package nttdata.javat2.business;
  * @author manoli
  *
  */
-public interface ManagmentServiceI {
+public interface ManagementServiceI {
 
 	/**
 	 * Método para dar de alta a empleados.

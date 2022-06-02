@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * @author manoli
  *
  */
-public class ManagementServiceImpl implements ManagmentServiceI {
+public class ManagementServiceImpl implements ManagementServiceI {
 
 	/** LOGGER */
 	private static final Logger LOG = LoggerFactory.getLogger(ManagementServiceImpl.class);
@@ -21,8 +21,8 @@ public class ManagementServiceImpl implements ManagmentServiceI {
 	private static final String LOG_START = "TRAZA DE INICIO";
 	private static final String LOG_END = "TRAZA FIN\n";
 
-	/** Mapa database de clave integer y de valor un objeto Empleado */
-	private Map<Integer, Employee> database = new HashMap<>(5);
+	/** Mapa database de clave integer y de valor un objeto Empleado */	
+	private Map<Integer, Employee> database = new HashMap<>(Employee.getMaximumEmployees());
 
 	/**
 	 * Método para dar de alta a empleados.
@@ -40,7 +40,7 @@ public class ManagementServiceImpl implements ManagmentServiceI {
 			// No deja dar de alta al empleado si su nombre o categoría no son correctos.
 		} else if (name.isBlank() || rank.isBlank() || !onlyLetters(name)) {
 
-			LOG.error("Tienes que introducir un nombre y/o categoria correctos.");
+			LOG.error("Nombre y/o categoria incorrectos.");
 
 			// Da de alta a un empleado.
 		} else {
